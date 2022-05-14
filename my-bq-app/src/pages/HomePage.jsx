@@ -1,20 +1,11 @@
 import React from "react";
-import MainSection from "../components/MainSection";
+import MediaCard from '../components/MediaCard.js';
 
-const HomePage = ({}) => {
+
+const HomePage = () => {
     return (
-      <>
-            <MainSection 
-              
-              height={300}
-              width={300}
-              title={"BurgerQueen"}
-              image1={"./assets/olive.png"}
-              slogan={"Let's eat this burger together!"}
-              image2={"./assets/burger.png"}
-            />
-            </>
+      <MediaCard></MediaCard>
     )
   }
   
-  export default HomePage
+  export default HomePage;

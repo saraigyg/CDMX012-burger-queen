@@ -4,77 +4,12 @@
   padding:0;
   box-sizing: border-box;
 }
-.App {
-  display:flex;
-  justify-content: center;
-  justify-items: center;
-}
-
-.mainLogo {
-  width: 768px;
-  height: 709px;
-  position:relative;
-}
-
-.mainFrame { 
-  background-color:white;
-  border-radius: 30px;
-  width: 600px;
-  height: 628px;
-  position:absolute;
-  margin-top:3%;
-}
-
-.secondFrame {
-  background-color: rgba(25, 25, 25, 1);
-  position: relative;
-  border-radius: 30px 30px 0 0;
-  width:600px;
-  height:300px;
-}
-
-.restauBrand {
-  display:flex;
-  justify-content:flex-start;
-  padding-left: 5%;
-  padding-top: 5%;
-  position: relative;
-}
-
-.restauBrand img {
-  width:45px;
-  height:85px;
-}
-.restauBrand label {
-  color:white;
-  font-family:'Roboto', sans-serif;
-  font-weight: bold;
-  font-size: 50px;
-  width:44px;
-  height:90px;
-}
-
-.home-slogan-brand {
-  display:flex;
-}
-
-.home-slogan-brand label {
-  align-self: flex-start;
-  padding: 5%;
-  color:white;
-  font-family:'Roboto', sans-serif;
-  font-size:36px;
-  position:absolute;
-  top:150px;
-}
-
-.home-slogan-brand img {
-  align-self: flex-end;
-  width:260px;
-  height:226px;
-  top: 75px;
-  right: 0px;
-  position:absolute;
+body {
+  background-image: url("../assets/wallpaper3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
 }
 
 
