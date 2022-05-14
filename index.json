@@ -1,14 +1,14 @@
 
  {
     "burgerQueenMenu": [{
-        "brunch burger menu": {
-            "regular-coffee": 5,
+        "breakfast menu": {
+            "black coffee": 5,
             "coffee with milk": 7,
             "jam and cheese sandwich": 10,
             "fruit juice": 7
         },
     
-        "burger queen menu": {
+        "launch menu": {
             "burgers": [{
                 "regular burger": 10,
                 "double burger": 15
@@ -17,7 +17,7 @@
                 "french fries": 5,
                 "onion rings": 5
             }],
-            "drinks": [{
+            "beverages": [{
                 "water bottle (500 mL)": 5,
                 "water bottle (750 mL)": 7,
                 "soda (500 mL)": 7,

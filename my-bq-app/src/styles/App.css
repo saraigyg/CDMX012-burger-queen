@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web&family=Roboto:wght@700&display=swap');
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url("../assets/wallpaper3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+}
+
+
+

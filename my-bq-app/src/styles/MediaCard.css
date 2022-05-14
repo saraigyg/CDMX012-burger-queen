@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web&family=Roboto:wght@700&display=swap');
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+
+.btns-nav button:hover {
+    background-color: #F4BC9A;
+}
+
+.btns-nav a:hover {
+    color:#342D29;
+    font-weight: bold;
+}
+
