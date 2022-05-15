@@ -6,7 +6,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import InputSection from './InputSection.js';
+import InputWithIcon from './InputSection.js';
 import CupCoffee from '../assets/coffee.png';
 import Lunch from '../assets/lunch.png';
 import { Link } from "react-router-dom";
@@ -25,22 +25,28 @@ export default function MediaCard() {
         <Typography style={{marginLeft:'1em'}} gutterBottom variant="h5" component="div">
           Type down customer's name please:
         </Typography>
-        <InputSection ></InputSection>
+        <InputWithIcon ></InputWithIcon>
         <Typography style={{marginLeft:'1em'}} variant="h5" color="text.primary">
           Choose a menu category:
         </Typography>
       </CardContent>
       <CardActions>
-        <Button width={140} height={140} className="breakfastMenu" variant="contained" style={{marginLeft:'2em',  marginBottom:'1.5em', backgroundColor: "rgb(52, 45, 41)"}}>
-          <Link to="" style={{color: "white", textDecoration:"none", padding:'1em'}}>Breakfast <br></br> Menu</Link>
-          <div className="second-circle" width={75} height={75} style={{backgroundColor: "white", padding:'0.5em'}}>
+        <Button width={140} height={140} className="breakfastMenu" variant="contained" 
+        style={{marginLeft:'2em',  marginBottom:'1.5em', backgroundColor: "rgb(52, 45, 41)"}}>
+          <Link to="" style={{color: "white", textDecoration:"none", padding:'1em'}} onClick={() => {
+          console.info("I'm a button.");}}>Breakfast <br></br> Menu</Link>
+          <div className="second-circle" width={75} height={75} 
+          style={{backgroundColor: "white", padding:'0.5em'}}>
             <img className= "cupCoffee" src={CupCoffee} width={45} height={45} alt="cupCoffee-img" />
           </div>
         </Button>
-        <Button width={140} height={140} className="lunchMenu" variant="contained" style={{marginLeft:'2em', marginBottom:'1.5em', backgroundColor: "rgb(52, 45, 41)"}}>
-          <Link to="" style={{color: "white", textDecoration:"none", padding:'1em'}} >Lunch <br></br> Menu</Link>
-          <div className="first-circle" width={75} height={75} style={{backgroundColor: "white", padding:'0.5em'}}>
-            <img className="lunch" src={Lunch} width={45} height={45} alt="Lunch-img" />
+        <Button width={140} height={140} className="lunchMenu" variant="contained" 
+        style={{marginLeft:'2em', marginBottom:'1.5em', backgroundColor: "rgb(52, 45, 41)"}}>
+          <Link to="" style={{color: "white", textDecoration:"none", padding:'1em'}} onClick={() => {
+          console.info("I'm a button.");}} >Lunch <br></br> Menu</Link>
+          <div className="first-circle" width={75} height={75} 
+          style={{backgroundColor: "white", padding:'0.5em'}}>
+          <img className="lunch" src={Lunch} width={45} height={45} alt="Lunch-img" />
           </div>
         </Button>
       </CardActions>

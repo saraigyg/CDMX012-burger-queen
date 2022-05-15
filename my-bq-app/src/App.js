@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, /* useNavigate*/ } from 'react-
 import HomePage from './pages/HomePage.jsx';
 import BreakfastPage from './pages/BreakfastPage.jsx';
 import LunchPage from './pages/LunchPage.jsx';
+import NotFoundPage from './pages/NotFoundPage.jsx';
 import './styles/App.css';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route index element={<HomePage />} />
         <Route path="breakfast-menu" element={<BreakfastPage />} />
         <Route path="lunch-menu" element={<LunchPage />} />
+        <Route path= "*" element = {<NotFoundPage/>} />
         </Routes>
       </Router>
     </section>

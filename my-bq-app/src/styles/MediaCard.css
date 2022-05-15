@@ -5,7 +5,10 @@
     padding: 0;
 }
 
-.btns-nav button:hover {
+.breakfastMenu {
+    box-shadow:  8px 6px -12px black;
+}
+.breakfastMenu:hover {
     background-color: #F4BC9A;
 }
 
