@@ -1,29 +1,11 @@
 import React, {useState} from 'react';
-import { BrowserRouter as Router, Routes, Route, /* useNavigate*/ } from 'react-router-dom';
-import HomePage from './pages/HomePage.jsx';
-import BreakfastPage from './pages/BreakfastPage.jsx';
-import LunchPage from './pages/LunchPage.jsx';
-import NotFoundPage from './pages/NotFoundPage.jsx';
-import './styles/App.css';
+import Home from './screens/Home';
+import Login from './screens/Login';
+
 
 function App() {
-  const [isVisible, setIsVisible] = useState(false);
-  const onPress = () => {
-    setIsVisible(!isVisible);
-    //const navigate = useNavigate(); 
-  };
-  return (
-    <section className="App">
-      <Router>
-        <Routes>
-        <Route index element={<HomePage />} />
-        <Route path="breakfast-menu" element={<BreakfastPage />} />
-        <Route path="lunch-menu" element={<LunchPage />} />
-        <Route path= "*" element = {<NotFoundPage/>} />
-        </Routes>
-      </Router>
-    </section>
-  ); 
-} 
+  const [user, setUser] = useState(null);
+  return <>  {user ? <Home /> : <Login /> } </>
+};
 
 export default App;
