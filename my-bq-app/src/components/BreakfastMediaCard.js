@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
 import MainLogo from '../assets/bqentrance.png';
 import IconChips from './IconChips.js';
-import CheckboxListSecondary from './ListSecondary.js';
+import AlignItemsList from './MenuElement';
 
 
 export default function MediaCard() {
@@ -27,7 +27,8 @@ export default function MediaCard() {
         </Typography>
       </CardContent>
       <CardActions>
-          <CheckboxListSecondary></CheckboxListSecondary>
+      <AlignItemsList></AlignItemsList> 
+         {/*  <ListItem></ListItem><CheckboxListSecondary></CheckboxListSecondary> */}
           <Button width={100} height={100} className="lunchMenu" variant="contained" 
           style={{marginLeft:'2em', marginBottom:'1.5em', backgroundColor: "rgb(52, 45, 41)"}}>
             <Link to="" style={{color: "white", textDecoration:"none", padding:'0.5em'}} onClick={() => {

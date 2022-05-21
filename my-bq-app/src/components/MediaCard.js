@@ -33,7 +33,7 @@ export default function MediaCard() {
       <CardActions>
         <Button width={140} height={140} className="breakfastMenu" variant="contained" 
         style={{marginLeft:'2em',  marginBottom:'1.5em', backgroundColor: "rgb(52, 45, 41)"}}>
-          <Link to="" style={{color: "white", textDecoration:"none", padding:'1em'}} onClick={() => {
+          <Link to="/breakfast-menu" style={{color: "white", textDecoration:"none", padding:'1em'}} onClick={() => {
           console.info("I'm a button.");}}>Breakfast <br></br> Menu</Link>
           <div className="second-circle" width={75} height={75} 
           style={{backgroundColor: "white", padding:'0.5em'}}>
@@ -42,7 +42,7 @@ export default function MediaCard() {
         </Button>
         <Button width={140} height={140} className="lunchMenu" variant="contained" 
         style={{marginLeft:'2em', marginBottom:'1.5em', backgroundColor: "rgb(52, 45, 41)"}}>
-          <Link to="" style={{color: "white", textDecoration:"none", padding:'1em'}} onClick={() => {
+          <Link to="/lunch-menu" style={{color: "white", textDecoration:"none", padding:'1em'}} onClick={() => {
           console.info("I'm a button.");}} >Lunch <br></br> Menu</Link>
           <div className="first-circle" width={75} height={75} 
           style={{backgroundColor: "white", padding:'0.5em'}}>
