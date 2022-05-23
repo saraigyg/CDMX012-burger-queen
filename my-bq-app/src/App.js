@@ -1,47 +1,23 @@
-import React, {useState} from 'react';
-import Home from './screens/Home.js';
-import Login from './screens/Login.js';
-import firebaseApp from './firebase/credentials.js'
-import { getAuth, onAuthStateChanged } from 'firebase/auth';
-import { getFirestore, doc, getDoc } from 'firebase/firestore';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import '../src/styles/App.css';
+import NotFoundPage from './pages/NotFoundPage.jsx';
+import RoleFirabase from './components/RoleFirebase.js';
 
-const auth = getAuth(firebaseApp);
-const firestore = getFirestore(firebaseApp);
+
 
 
 function App() {
-  const [user, setUser] = useState(null);
-
-  async function getRole(uid) {
-    const docuRef = doc(firestore, `Profile/${uid}`);
-    const docuEncrypted = await getDoc(docuRef);
-    const finalInfo = docuEncrypted.data().role;
-    return finalInfo;
-  }
-
-  function setUserWithRole(firebaseUser) {
-    getRole(firebaseUser.uid).then((role) => {
-      const userData = {
-        uid: firebaseUser.uid,
-        email: firebaseUser.email,
-        role:role,
-      };
-      setUser(userData);
-      console.log("Final userData", userData);
-    });
-  }
-
-  onAuthStateChanged(auth, (firebaseUser) => {
-    if(firebaseUser) {
-      if(!user) {
-        setUserWithRole(firebaseUser);
-      }
-    }
-    else {
-      setUser(null);
-    }
-  });
-  return <>  {user ? <Home user={user}/> : <Login /> } </>
+  return (
+    <div className="App">
+  <Router>
+    <Routes>
+      <Route path="/" element = {<RoleFirabase />} />
+      <Route path= "*" element = {<NotFoundPage/>} />
+    </Routes>
+  </Router>
+  </div>
+  )
 };
 
 export default App;

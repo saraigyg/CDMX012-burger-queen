@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import firebaseApp from "../firebase/credentials";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
-import { getFirestore, doc, setDoc } from "firebase/firestore"
+import { getFirestore, doc, setDoc } from "firebase/firestore";
 
 const auth = getAuth(firebaseApp);
 const firestore = getFirestore(firebaseApp);

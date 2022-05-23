@@ -10,8 +10,8 @@ function Home (user) {
     return (
         <div>
             Home
-            <button  onClick={() => signOut(auth)}>Log Out</button>
-            {user.role === 'admin' ? <AdminView /> : <WaiterView/>}
+            <button onClick={() => signOut(auth)}>Log Out</button>
+            {user.user.role === 'admin' ? <AdminView /> : <WaiterView />}
         </div>
     )
 }
