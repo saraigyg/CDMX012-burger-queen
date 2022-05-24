@@ -4,15 +4,5 @@
   padding:0;
   box-sizing: border-box;
 }
-body {
-  background: rgba(249, 178, 132, 0.1);
-  mix-blend-mode: hard-light;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100vw;
-  height: 100vh;
-  position:relative;
-}
-
 
 

@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import Home from '../pages/Home.jsx';
 import Login from '../pages/Login.jsx';
+import MediaCard from './MediaCard.js';
 import firebaseApp from '../firebase/credentials.js'
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { getFirestore, doc, getDoc } from 'firebase/firestore';
@@ -10,6 +11,7 @@ const auth = getAuth(firebaseApp);
 const firestore = getFirestore(firebaseApp);
 
 export default function RoleFirabase () {
+   
     const [user, setUser] = useState(null);
 
   async function getRole(uid) {
@@ -41,5 +43,6 @@ export default function RoleFirabase () {
       setUser(null);
     }
   });
-  return <>  {user ? <Home user={user}/> : <Login /> } </>
+  return <>  <MediaCard></MediaCard>
+  {user ? <Home user={user}/> : <Login /> } </>
 }

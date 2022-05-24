@@ -5,15 +5,3 @@
     padding: 0;
 }
 
-.breakfastMenu {
-    box-shadow:  8px 6px -12px black;
-}
-.breakfastMenu:hover {
-    background-color: #F4BC9A;
-}
-
-.btns-nav a:hover {
-    color:#342D29;
-    font-weight: bold;
-}
-
