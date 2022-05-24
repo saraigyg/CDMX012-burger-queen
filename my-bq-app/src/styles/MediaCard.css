@@ -5,12 +5,3 @@
     padding: 0;
 }
 
-.btns-nav button:hover {
-    background-color: #F4BC9A;
-}
-
-.btns-nav a:hover {
-    color:#342D29;
-    font-weight: bold;
-}
-

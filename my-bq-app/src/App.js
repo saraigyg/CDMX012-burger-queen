@@ -1,27 +1,20 @@
-import React, {useState} from 'react';
-import { BrowserRouter as Router, Routes, Route, /* useNavigate*/ } from 'react-router-dom';
-import HomePage from './pages/HomePage.jsx';
-import BreakfastPage from './pages/BreakfastPage.jsx';
-import LunchPage from './pages/LunchPage.jsx';
-import './styles/App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import '../src/styles/App.css';
+import NotFoundPage from './pages/NotFoundPage.jsx';
+import RoleFirabase from './components/RoleFirebase.js';
 
 function App() {
-  const [isVisible, setIsVisible] = useState(false);
-  const onPress = () => {
-    setIsVisible(!isVisible);
-    //const navigate = useNavigate(); 
-  };
   return (
-    <section className="App">
+    <><div className="App">
       <Router>
         <Routes>
-        <Route index element={<HomePage />} />
-        <Route path="breakfast-menu" element={<BreakfastPage />} />
-        <Route path="lunch-menu" element={<LunchPage />} />
+          <Route path="/" element={<RoleFirabase />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Router>
-    </section>
-  ); 
-} 
+    </div></>
+  )
+};
 
 export default App;
