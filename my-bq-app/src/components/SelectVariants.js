@@ -5,10 +5,10 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
 export default function SelectVariants() {
-  const [age, setAge] = React.useState('');
+  const [role, setRole] = React.useState('');
 
   const handleChange = (event) => {
-    setAge(event.target.value);
+    setRole(event.target.value);
   };
 
   return (
@@ -18,7 +18,7 @@ export default function SelectVariants() {
         <Select
           labelId="demo-simple-select-standard-label"
           id="demo-simple-select-standard"
-          value={age}
+          value={role}
           onChange={handleChange}
           label="Role"
         >
